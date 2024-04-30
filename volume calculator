@@ -1,0 +1,44 @@
+ int Length = 0;
+        int Width = 0;
+        int Hight = 0;
+        int Rad = 0;
+        double Out = 0;
+        Console.WriteLine("VOLUME CALCULATOR");
+        Console.WriteLine("");
+        Console.WriteLine("Note:You only need to input one perimiter for cube and leave the others as 0.Also for cyllinder and cone the only values you need are length and radius, just leave the others as 0 too");
+        Console.WriteLine("");
+        Console.WriteLine("Enter shape: rectanguar prisim(1), cube(2), triangular prisim(3), cyllinder(4), cone(5)");
+        Console.WriteLine("");
+        Console.WriteLine("Input choice below:");
+        int shape = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Input Length");
+        Length = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Input Width");
+        Width = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Input Hight");
+        Hight = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Input Radius");
+        Rad = Convert.ToInt32(Console.ReadLine());
+        if(shape == 1)
+        {
+        Out = Length * Width * Hight;
+        }
+        else if(shape == 2)
+        {
+        Out = Math.Pow(Length, 3);
+        }
+        else if(shape == 3)
+        {
+        Out = ((Width * Hight) / 2) * Length;
+        }
+        else if(shape == 4)
+        {
+          Out = (Math.PI * Math.Pow(Rad, 2)) * Length;  
+        }
+        else if(shape == 5)
+        {
+          Out = (Math.PI * Math.Pow(Rad, 2) * Length) / 3; 
+        }
+        Console.WriteLine("Volume:");
+        Console.WriteLine(Out);
+
